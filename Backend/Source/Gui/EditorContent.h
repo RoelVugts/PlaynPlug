@@ -71,7 +71,7 @@ private:
 
         slider->setTextValueSuffix(sliderConfig->suffix);
         slider->valueFromTextFunction = [sliderConfig] (const juce::String& text) { return (double) sliderConfig->range.convertTo0to1(sliderConfig->range.snapToLegalValue(text.getFloatValue())); };
-        slider->textFromValueFunction = [sliderConfig] (double value){ return juce::String(std::round(sliderConfig->range.convertFrom0to1(value) * 100.0f) /100.0f); };
+        slider->textFromValueFunction = [sliderConfig] (double value){ return juce::String(std::round(sliderConfig->range.convertFrom0to1((float)value) * 100.0f) /100.0f); };
         slider->setDoubleClickReturnValue (true, sliderConfig->range.convertTo0to1(sliderConfig->defaultValue));
         slider->updateText();
 

@@ -87,10 +87,10 @@ public:
     }
 
 
-    void setName(const juce::String& name)
+    void setName(const juce::String& newName)
     {
         // TODO: Not thread safe
-        parameterName = name;
+        parameterName = newName;
     }
 
     juce::String getName(int maximumStringLength) const override
@@ -115,7 +115,7 @@ public:
     {
         if(mode == Integer)
         {
-            return (range.end - range.start) + 1;
+            return (int)(range.end - range.start) + 1;
         }
 
         return static_cast<int>((range.end - range.start) / std::numeric_limits<float>::epsilon()) + 1;

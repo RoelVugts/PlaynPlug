@@ -24,7 +24,9 @@ private:
     void setValue(float newValue)
     {
         const juce::ScopedValueSetter<bool> svs(ignoreCallbacks, true);
-        const int intValue = newValue * (button.getNumItems() - 1) + 0.5f;
+
+        // Convert 0To1 to item index
+        const int intValue = (int)(newValue * (float)(button.getNumItems() - 1) + 0.5f);
         button.setCurrentItem(intValue, juce::sendNotification);
     }
 

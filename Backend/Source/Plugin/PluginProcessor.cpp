@@ -89,14 +89,14 @@ void AudioPluginAudioProcessor::changeProgramName (int index, const juce::String
 }
 
 //==============================================================================
-void AudioPluginAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
+void AudioPluginAudioProcessor::prepareToPlay (double _sampleRate, int _samplesPerBlock)
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
     juce::ignoreUnused (sampleRate, samplesPerBlock);
 
-    this->sampleRate = sampleRate;
-    this->samplesPerBlock = samplesPerBlock;
+    this->sampleRate = _sampleRate;
+    this->samplesPerBlock = _samplesPerBlock;
 
     prepareProcessor();
 }
@@ -262,7 +262,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout AudioPluginAudioProcessor::c
     std::vector<std::unique_ptr<PluginParameter>> params;
 //
     for (int i = 0; i < NUM_PARAMS; i++)
-        params.push_back(std::make_unique<PluginParameter>(juce::String(i+1), 0, 1, 0));
+        params.push_back(std::make_unique<PluginParameter>(juce::String(i+1), 0.0f, 1.0f, 0.0f));
 
     return { params.begin(), params.end() };
 }

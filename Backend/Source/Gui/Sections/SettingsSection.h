@@ -3,7 +3,7 @@
 #include <JuceHeader.h>
 #include "../../Plugin/PluginProcessor.h"
 #include "../../Data/Properties.h"
-#include "../Utils/Config.h"
+#include "../../Utils/Config.h"
 #include "../../Data/Data.h"
 
 class SettingsSection : public juce::Component, private juce::Timer {
