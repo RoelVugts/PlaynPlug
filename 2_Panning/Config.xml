@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Config>
+    <Colours mainBackground="#ff1a2736"/>
+    <MainUI width="600" height="400"/>
+    <Components>
+        <Slider id="1" name="Pan" x="200" y="300" width="200" height="200" min="-100.0" max="100.0" defaultValue="0.0" sliderStyle="RotaryVerticalDrag" suffix="%"/>
+        <Slider id="2" name="Left" x="50" y="75" width="200" height="200" min="-100.0" max="12.0" defaultValue="0.0" sliderStyle="RotaryVerticalDrag" suffix="dB"/>
+        <Slider id="3" name="Right" x="350" y="75" width="200" height="200" min="-100.0" max="12.0" defaultValue="0.0" sliderStyle="RotaryVerticalDrag" suffix="dB"/>
+        <Menu id="4" name="Pan Law" x="250" y="520" width="100" height="25">
+            <Item name="Linear"/>
+            <Item name="Constant Power"/>
+        </Menu>
+    </Components>
+</Config>

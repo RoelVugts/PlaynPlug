@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Config>
+    <Colours mainBackground="#ff1a2736"/>
+    <MainUI width="500" height="400"/>
+    <Components>
+        <Slider id="1" name="Gain" x="50" y="75" width="400" height="350" min="-120.0" max="12.0" defaultValue="0.0" sliderStyle="RotaryVerticalDrag" suffix="dB"/>
+    </Components>
+</Config>
